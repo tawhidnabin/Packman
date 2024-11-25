@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacman Game</title>
+    <style>
+        /* Inline styles moved here for better readability */
+        body {
+            margin: 0;
+            background-color: black;
+        }
+        @font-face {
+        font-family: 'Emulogic';
+        src: url('path-to-emulogic-font.ttf') format('truetype');
+        }
+
+        #canvas {
+            display: block; /* Removes unwanted scrollbars */
+            margin: auto;
+        }
+
+        /* Hidden container for preloading images */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="padding-top: 10px;">
+    <h2 style="text-align: center; margin-left: -80px;
+    color: white;">Pacman Game</h2>
+    <!-- Main game canvas -->
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <!-- Preloading necessary images -->
+    <div class="hidden">
+        <img id="animation" src="animations.gif" alt="Pacman animation frames" width="140" height="20">
+        <img id="ghosts" src="ghost.png" alt="Ghost character animation frames" width="140" height="20">
+    </div>
+
+    <!-- External JavaScript files -->
+    <script src="ghost.js"></script>
+    <script src="pacman.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
